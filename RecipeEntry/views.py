@@ -25,3 +25,6 @@ def detail(request, recipe_id):
     except Recipe.DoesNotExist:
         raise Http404("Recipe does not exist")
     return render(request, "RecipeEntry/detail.html", {"recipe": recipe})
+
+def newEntry(request):
+    return HttpResponse("<h1> Entry Form </h1>")

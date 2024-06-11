@@ -26,3 +26,4 @@ class RecipeIngredient(models.Model):
     Ingredient = models.ForeignKey(Ingredient, on_delete=models.CASCADE)
     quantity = models.DecimalField(max_digits= 10,decimal_places=2)
     unit = models.CharField(max_length=50)
+    
