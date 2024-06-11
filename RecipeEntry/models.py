@@ -4,7 +4,7 @@ from Inventory.models import Ingredient
 # Create your models here.
 class Recipe(models.Model):
     name = models.CharField(max_length= 255)
-    image = models.ImageField()
+    image = models.ImageField(upload_to='recipes/')
     description = models.TextField(max_length=255)
     def __str__(self):
         return self.name

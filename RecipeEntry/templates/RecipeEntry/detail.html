@@ -1,1 +1,16 @@
-{{ recipe }}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe</title>
+</head>
+<body>
+    <h1>{{ recipe.name }}</h1>
+    <p>{{ recipe.description }}</p>
+    <p>Image URL: {{ recipe.image.url }}</p>
+    <p>Image Path: {{ recipe.image.path }}</p>
+    <img src="{{ recipe.image.url }}" width="120" alt="{{ recipe.name }}"/>
+</body>
+</html>

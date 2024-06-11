@@ -27,4 +27,4 @@ def detail(request, recipe_id):
     return render(request, "RecipeEntry/detail.html", {"recipe": recipe})
 
 def newEntry(request):
-    return HttpResponse("<h1> Entry Form </h1>")
+    return render(request,'RecipeEntry/entry.html')
