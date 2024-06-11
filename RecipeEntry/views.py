@@ -24,4 +24,4 @@ def detail(request, recipe_id):
         recipe = Recipe.objects.get(pk=recipe_id)
     except Recipe.DoesNotExist:
         raise Http404("Recipe does not exist")
-    return render(request, "recipes/detail.html", {"recipe": recipe})
+    return render(request, "RecipeEntry/detail.html", {"recipe": recipe})
