@@ -1,3 +1,22 @@
 <h1>
     Entry Form Version 2
 </h1> 
+<form>
+
+    <label for="Recipename">Recipe Name:</label>
+    <input type="text" id="Recipename" name="Recipename"><br><br>
+
+    
+
+    <br>
+        <h4>Choose Ingredients:</h4>
+            {% for ingredient in ingredients %}
+                <input type="radio"> {{ ingredient.name }}
+                <br>
+            {% endfor %}
+
+
+    <br>
+    <input type="submit" value="Submit Recipe" name="Submit">
+    
+</form>

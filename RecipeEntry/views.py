@@ -6,7 +6,7 @@ from django.http import Http404
 from django.urls import reverse
 
 from RecipeEntry.models import *
-
+from Inventory.models import Ingredient
 
 
 # Create your views here.
@@ -27,4 +27,5 @@ def detail(request, recipe_id):
     return render(request, "RecipeEntry/detail.html", {"recipe": recipe})
 
 def newEntry(request):
-    return render(request,'RecipeEntry/entry.html')
+    ingredients = Ingredient.objects.all()
+    return render(request,'RecipeEntry/entry.html',{"ingredients": ingredients})
